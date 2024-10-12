@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.exercise7mybackgroundthread"
+    namespace = "com.example.exercise8myquote"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.exercise7mybackgroundthread"
+        applicationId = "com.example.exercise8myquote"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -42,9 +42,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
