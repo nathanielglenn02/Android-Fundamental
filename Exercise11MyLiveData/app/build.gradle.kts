@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.exercise10myviewmodel"
+    namespace = "com.example.exercise11mylivedata"
     compileSdk = 34
 
     buildFeatures {
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.exercise10myviewmodel"
+        applicationId = "com.example.exercise11mylivedata"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -47,7 +47,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.activity.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
