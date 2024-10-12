@@ -18,6 +18,7 @@ import com.example.exercise9restaurantreview.data.response.Restaurant
 import com.example.exercise9restaurantreview.data.response.RestaurantResponse
 import com.example.exercise9restaurantreview.data.retrofit.ApiConfig
 import com.example.exercise9restaurantreview.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Call
@@ -50,6 +51,16 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.isLoading.observe(this) {
             showLoading(it)
         }
+
+        mainViewModel.snackbarText.observe(this, {
+            it.getContentIfNotHandled()?.let { snackBarText ->
+                Snackbar.make(
+                    window.decorView.rootView,
+                    snackBarText,
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            }
+        })
 
         binding.btnSend.setOnClickListener { view ->
             mainViewModel.postReview(binding.edReview.text.toString())
